@@ -1,0 +1,12 @@
+[global]
+follow = mouse
+enable_posix_regex = true
+notification_limit = 10
+layer = overlay
+font = JetBrainsMono Nerd Font Medium 13;hinting=slight;antialias=true
+corner_radius = 10
+offset = (20, 20)
+frame_width = 2
+frame_color = "#f48ba8"
+background = "#000000CC"
+foreground = "#c0caf5"

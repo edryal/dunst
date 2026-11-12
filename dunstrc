@@ -1,12 +1,88 @@
 [global]
+monitor = 0
 follow = mouse
+layer = overlay
 enable_posix_regex = true
 notification_limit = 10
-layer = overlay
-font = JetBrainsMono Nerd Font Medium 13;hinting=slight;antialias=true
+idle_threshold = 120
+
+# Size and position
+width = (250, 400)
+height = (0, 300)
+origin = top-right
+offset = (12, 5)
+gap_size = 8
+
+# Vague theme
+font = JetBrainsMono Nerd Font 13
+markup = full
+format = "<b>%s</b>\n%b"
+alignment = left
+vertical_alignment = center
+ellipsize = middle
+ignore_newline = no
+show_indicators = yes
 corner_radius = 10
-offset = (20, 20)
 frame_width = 2
-frame_color = "#f48ba8"
-background = "#000000CC"
-foreground = "#c0caf5"
+padding = 10
+horizontal_padding = 12
+text_icon_padding = 12
+
+# Icons
+enable_recursive_icon_lookup = true
+icon_theme = "Papirus-Dark, Adwaita"
+icon_position = left
+min_icon_size = 32
+max_icon_size = 48
+icon_corner_radius = 6
+
+# Progress bar (volume / brightness)
+progress_bar = true
+progress_bar_height = 8
+progress_bar_frame_width = 0
+progress_bar_corner_radius = 4
+progress_bar_min_width = 150
+progress_bar_max_width = 400
+
+# Behavior
+stack_duplicates = true
+hide_duplicate_count = false
+show_age_threshold = 60
+sticky_history = yes
+history_length = 50
+dmenu = rofi -dmenu -p "action"
+browser = xdg-open
+mouse_left_click = close_current
+mouse_middle_click = do_action, close_current
+mouse_right_click = close_all
+
+[urgency_low]
+background = "#141415D9"
+foreground = "#878787"
+frame_color = "#252530"
+highlight = "#606079"
+timeout = 4
+fullscreen = delay
+
+[urgency_normal]
+background = "#141415D9"
+foreground = "#cdcdcd"
+frame_color = "#bb9dbd"
+highlight = "#bb9dbd"
+timeout = 6
+fullscreen = delay
+
+[urgency_critical]
+background = "#141415F2"
+foreground = "#cdcdcd"
+frame_color = "#d8647e"
+highlight = "#d8647e"
+timeout = 0
+fullscreen = show
+
+# Volume and brightness OSD - short timeout, no history spam
+[osd]
+stack_tag = "osd"
+timeout = 1.5
+history_ignore = yes
+format = "<b>%s</b>"
